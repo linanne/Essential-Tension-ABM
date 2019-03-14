@@ -13,7 +13,7 @@ _Your Name_
 ### Goal 
 *****
  
-_To model what Thomas Kuhn calls the "essential tension" of science, which is the tension amongst scientists to pursue traditional versus innnovative work. _
+_To model the emergent effect of what Thomas Kuhn calls the "essential tension" of science, which is the tension amongst scientists to pursue traditional versus innnovative work. _
 
 &nbsp;  
 ### Justification
