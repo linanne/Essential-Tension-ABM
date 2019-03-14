@@ -55,8 +55,17 @@ _Description of the environment in your model. Things to specify *if they apply*
  _Description of the "agents" in the system. Things to specify *if they apply*:_
  
 * _List of agent-owned variables (e.g. age, heading, ID, etc.)_
-* _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 
+* agent.basic_personality()
+* agent.innovativeness()
+   * this parameter takes into account both the agent's basic personality, and also the discipline's innovativeness
+* agent.success()
+* agent.color()
+
+* _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
+* agent.bridge()
+* agent.connect()
+* agent.create()
 
 ```python
 # Include first pass of the code you are thinking of using to construct your agents
@@ -77,14 +86,24 @@ _Description of the topology of who interacts with whom in the system. Perfectly
 
 _What does an agent, cell, etc. do on a given turn? Provide a step-by-step description of what happens on a given turn for each part of your model_
 
-1. Step 1
-2. Step 2
-3. Etc...
+1. Agents create nodes
+   * a set of agents create nodes in the environment
+   * there are three ways an agent can create a node
+      1. The agent can create a node that is connected to a pre-existing node
+      2. The agent can create a node that bridges two clusters of nodes
+      3. The agent can create an independent node that is not connected to any pre-exisisting node
+   * The less innovative an agent is, the more likely the agent is to choose #1; the more innovative an agent is, the more likely the agent is to choose action #3
+   * radius
+   * If the agent chooses #1 or #2, then the agent's node 
+   * direction
+      
 
 &nbsp; 
 ### 4) Model Parameters and Initialization
 
 _Describe and list any global parameters you will be applying in your model._
+
+* discipline.innovativeness()
 
 _Describe how your model will be initialized_
 
