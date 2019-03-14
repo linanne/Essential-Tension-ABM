@@ -61,6 +61,9 @@ _Description of the environment in your model. Things to specify *if they apply*
    * this parameter takes into account both the agent's basic personality, and also the discipline's innovativeness
 * agent.success()
 * agent.color()
+* agent.citation_count()
+* agent.project_duration()
+* agent.career_length()
 
 * _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 * agent.bridge()
@@ -87,15 +90,18 @@ _Description of the topology of who interacts with whom in the system. Perfectly
 _What does an agent, cell, etc. do on a given turn? Provide a step-by-step description of what happens on a given turn for each part of your model_
 
 1. Agents create nodes
-   * a set of agents create nodes in the environment
+   * a set of agents create nodes in the environment. The nodes represent a research paper that they publish
    * there are three ways an agent can create a node
       1. The agent can create a node that is connected to a pre-existing node
       2. The agent can create a node that bridges two clusters of nodes
       3. The agent can create an independent node that is not connected to any pre-exisisting node
    * The less innovative an agent is, the more likely the agent is to choose #1; the more innovative an agent is, the more likely the agent is to choose action #3
-   * radius
-   * If the agent chooses #1 or #2, then the agent's node 
-   * direction
+   * If the agent chooses #1 or #2, then the agent's new node must be under a certain degree away from one of the previous node(s) of the same agent, given that it is not the agent's first turn. The maximum number of degrees will be randomly assigned based on a bell-shaped curve. The variance of the curve can be adjusted by parameter PARAMETER_NAME. This is to capture the fact that scientists usually only explore a small number of topics. Additionally, the number of topics that a scientist explores may also vary by discipline. 
+   * If the agent chooses #1, the agent's level of innovativeness then further determines which pre-existing node the agent's new node will connect to. The less innovative the agent is, the more likely that the agent will choose to connect to a node with high centrality. 
+2. Agents adjust their total citation count
+   * Each agent of the round will be rewarded for their research paper through receiving citations. The number of citations received for a paper is determined probablistically depending on the number of connections the node has. If the node is not connected to any other nodes (aka the agent chooses action #3), then the number of citations received for the node will be determined by a bimodal distribution. Otherwise, the number of citations will be determined by a binomial distribution, where the more connections the node has, the smaller the variance of the curve. 
+3. Agents adjust their individual project duration
+
       
 
 &nbsp; 
