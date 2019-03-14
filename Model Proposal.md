@@ -99,8 +99,17 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
    * If the agent chooses #1 or #2, then the agent's new node must be under a certain degree away from one of the previous node(s) of the same agent, given that it is not the agent's first turn. The maximum number of degrees will be randomly assigned based on a bell-shaped curve. The variance of the curve can be adjusted by parameter PARAMETER_NAME. This is to capture the fact that scientists usually only explore a small number of topics. Additionally, the number of topics that a scientist explores may also vary by discipline. 
    * If the agent chooses #1, the agent's level of innovativeness then further determines which pre-existing node the agent's new node will connect to. The less innovative the agent is, the more likely that the agent will choose to connect to a node with high centrality. 
 2. Agents adjust their total citation count
-   * Each agent of the round will be rewarded for their research paper through receiving citations. The number of citations received for a paper is determined probablistically depending on the number of connections the node has. If the node is not connected to any other nodes (aka the agent chooses action #3), then the number of citations received for the node will be determined by a bimodal distribution. Otherwise, the number of citations will be determined by a binomial distribution, where the more connections the node has, the smaller the variance of the curve. 
-3. Agents adjust their individual project duration
+   * Each agent of the round will be rewarded for their research paper through receiving citations. The number of citations received for a paper is determined probablistically depending on the number of connections the node has. If the node is not connected to any other nodes (aka the agent chooses action #3), then the number of citations received for the node will be determined by a bimodal distribution. Otherwise, the number of citations will be determined by a binomial distribution, where the more connections the node has, the smaller the variance of the curve. (CORRECTION: how can #1 produce node with 1+ connections?)
+   * The citations an agent receives for the round is added to the agent's total number of citations (agent.citation_count)
+3. Agents who produced a node this round reset their project durations
+   * The more connections an agent's node has, the shorter the project duration will be. This will determine how many turns it will take before the same agent creates another node. This is to account for the idea that the less explored a topic is, the longer it will take to conduct research surrounding the topic. 
+   * The agent is assigned a new project_duration (agent.project_duration). 
+4. All other agents decrease their project_duration by 1
+5. All agents increase agent.career_duation by 1
+6. Some old agents retire
+   * For each agent, if agent.career_duration = discipline.career_duration, agent retires and will no longer be creating nodes.
+7. Some new agents join in
+   * The number of new agents that join in a round is determined probablistically by a normal distribution. The mean of the normal distribution depends on the discipline's popularity (discipline.popularity).
 
       
 
@@ -110,6 +119,8 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
 _Describe and list any global parameters you will be applying in your model._
 
 * discipline.innovativeness()
+* disciipline.career_length()
+* discipline.popularity()
 
 _Describe how your model will be initialized_
 
