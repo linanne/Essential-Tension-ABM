@@ -40,18 +40,6 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ### 1) Environment
 _Description of the environment in your model. Things to specify *if they apply*:_
 
-* _Boundary conditions (e.g. wrapping, infinite, etc.)_
-* _Dimensionality (e.g. 1D, 2D, etc.)_
-* _List of environment-owned variables (e.g. resources, states, roughness)_
-* _List of environment-owned methods/procedures (e.g. resource production, state change, etc.)_
-
-
-```python
-# Include first pass of the code you are thinking of using to construct your environment
-# This may be a set of "patches-own" variables and a command in the "setup" procedure, a list, an array, or Class constructor
-# Feel free to include any patch methods/procedures you have. Filling in with pseudocode is ok! 
-# NOTE: If using Netlogo, remove "python" from the markdown at the top of this section to get a generic code block
-```
 
 &nbsp; 
 
