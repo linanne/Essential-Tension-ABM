@@ -23,9 +23,9 @@ _The essential tension resembles models of exploration exploitation, which is a 
 &nbsp; 
 ### Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
-   * convergence and discipline maturity
+   1. convergence and discipline maturity
       * a discipline should converge overtime
-   * convergence vs. divergence timespan
+   2. convergence vs. divergence timespan
       * a discipline should spend most of its time in convergence phase, and much less time in divergence phase (where a spike number of agents of a given round, or a given set of rounds, diverge)
    
    
@@ -40,6 +40,7 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ### 1) Environment
 _Description of the environment in your model. Things to specify *if they apply*:_
 
+* discipline.popularity()
 
 &nbsp; 
 
@@ -49,14 +50,13 @@ _Description of the environment in your model. Things to specify *if they apply*
  
 * _List of agent-owned variables (e.g. age, heading, ID, etc.)_
 
-* agent.basic_personality()
-* agent.innovativeness()
-   * this parameter takes into account both the agent's basic personality, and also the discipline's innovativeness
-* agent.success()
-* agent.color()
-* agent.citation_count()
-* agent.project_duration()
-* agent.career_length()
+* agent.basic_personality = random number between 1-100
+* agent.innovativeness = (citation count *percentile*) x (basic_personality / 100)
+   * this parameter takes into account both the agent's basic personality, and also their citation count
+* agent.color = random *unique* color
+* agent.citation_count = 0
+* agent.project_duration = 0
+* agent.career_length = 0
 
 * _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 * agent.connect()
@@ -75,11 +75,9 @@ _Description of the environment in your model. Things to specify *if they apply*
  
 **_Interaction Topology_**
 
-_Description of the topology of who interacts with whom in the system. Perfectly mixed? Spatial proximity? Along a network? CA neighborhood?_
+_Agents interact with each other through building a network._
  
 **_Action Sequence_**
-
-_What does an agent, cell, etc. do on a given turn? Provide a step-by-step description of what happens on a given turn for each part of your model_
 
 1. Agents create nodes
    * a set of agents create nodes in the environment. The nodes represent a research paper that they publish
@@ -114,13 +112,11 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
 
 _Describe and list any global parameters you will be applying in your model._
 
-* disciipline.career_length()
-* discipline.popularity()
-* model.ticks()
+* career_length()
+* ticks()
+* initial_population()
 
-_Describe how your model will be initialized_
-
-_Provide a high level, step-by-step description of your schedule during each "tick" of the model_
+This model does not have patches in the envrionment. So instead, the model will start off with a group of agents creating nodes in the environment. The number of intial agents is specified in parameter intial_population. 
 
 &nbsp; 
 
