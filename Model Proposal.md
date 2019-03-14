@@ -23,8 +23,6 @@ _The essential tension resembles models of exploration exploitation, which is a 
 &nbsp; 
 ### Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
-
-_dynamics/stylized facts/assumptions/anciticpated results_
    * convergence and discipline maturity
       * a discipline should converge overtime
    * convergence vs. divergence timespan
