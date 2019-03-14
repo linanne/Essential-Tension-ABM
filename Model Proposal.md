@@ -122,9 +122,7 @@ This model does not have patches in the envrionment. So instead, the model will 
 
 ### 5) Assessment and Outcome Measures
 
-_What quantitative metrics and/or qualitative features will you use to assess your model outcomes?_
-
-
+* I would expect to see convergence happening over time 
 
 &nbsp; 
 
