@@ -25,20 +25,10 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ****
 
 _dynamics/stylized facts/assumptions/anciticpated results_
-   * three types of work
-      * extender
-      * adjuster
-      * data-collector
-   * exploitation = more productive
-   * ignorant exploration is not productive (234)
-   * productive exploration = realizing that something is wrong with current knowledge
-   * traditionalist should yield successful scientific work
-
-_finalized_
    * convergence and discipline maturity
-   * convergence leads to popularity
-   * discipline's average innovation level and discipline popularity
+      * a discipline should converge overtime
    * convergence vs. divergence timespan
+      * a discipline should spend most of its time in convergence phase, and much less time in divergence phase (where a spike number of agents of a given round, or a given set of rounds, diverge)
    
    
 
