@@ -25,14 +25,6 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ****
 
 _dynamics/stylized facts/assumptions/anciticpated results_
-   * divergent vs convergent education
-   * normal science has high level of convergence (227)
-   * extended periods of convergence is necessary prelim to revolutionary shifts (227)
-   * convergence linked to rapid, systematic progress (230)
-   * new field = conflicting viewpoints (231)
-   * scientist/group should be both traditionalist and iconoclast (227)
-   * liberal early phase -> impression of not much progress (231)
-   * firm concensus <-> (?) pattern of rapid adancement (232)
    * three types of work
       * extender
       * adjuster
@@ -41,6 +33,13 @@ _dynamics/stylized facts/assumptions/anciticpated results_
    * ignorant exploration is not productive (234)
    * productive exploration = realizing that something is wrong with current knowledge
    * traditionalist should yield successful scientific work
+
+_finalized_
+   * convergence and discipline maturity
+   * convergence leads to popularity
+   * discipline's average innovation level and discipline popularity
+   * convergence vs. divergence timespan
+   
    
 
 
@@ -141,6 +140,7 @@ _Describe and list any global parameters you will be applying in your model._
 
 * disciipline.career_length()
 * discipline.popularity()
+* model.ticks()
 
 _Describe how your model will be initialized_
 
