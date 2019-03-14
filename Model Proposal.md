@@ -100,10 +100,13 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
    * Each agent of the round will be rewarded for their research paper through receiving citations. The number of citations received for a paper is determined probablistically depending on the number of connections the node has. If the node is not connected to any other nodes (aka the agent chooses action #3), then the number of citations received for the node will be determined by a bimodal distribution. Otherwise, the number of citations will be determined by a binomial distribution, where the more connections the node has, the smaller the variance of the curve. (CORRECTION: how can #1 produce node with 1+ connections?)
    * The citations an agent receives for the round is added to the agent's total number of citations (agent.citation_count)
 3. Agents adjust their innovativeness
-   * the new agent.innovativeness for each agent depends on both on their agent.basic_personality and their updated agent.citation_count
+   * The new agent.innovativeness for each agent depends on both on their agent.basic_personality and their updated agent.citation_count
+4. Discipline adjusts their popularity
+   * (discipline.popularity())
+   * Based on the average number of citations of a given agent in the last few rounds
 4. Agents reset their project durations
    * The more connections an agent's node has, the shorter the project duration will be. This will determine how many turns it will take before the same agent creates another node. This is to account for the idea that the less explored a topic is, the longer it will take to conduct research surrounding the topic. 
-   * The agent is assigned a new project_duration (agent.project_duration). 
+   * The agent is assigned a new project_duration (agent.project_duration).
 5. Other agents decrease their project_duration by 1
 6. All agents increase agent.career_duation by 1
 7. Some old agents retire
