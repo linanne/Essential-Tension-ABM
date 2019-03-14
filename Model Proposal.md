@@ -13,7 +13,7 @@ _Your Name_
 ### Goal 
 *****
  
-_To model the emergent effect of what Thomas Kuhn calls the "essential tension" of science, which is the tension amongst scientists to pursue traditional versus innnovative work. _
+_To model the emergent effect of what Thomas Kuhn calls the "essential tension" of science, which is the tension amongst scientists to pursue traditional versus innnovative work._
 
 &nbsp;  
 ### Justification
@@ -24,7 +24,25 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ### Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
 
-_Short overview of the key processes and/or relationships you are interested in using your model to explore. Will likely be something regarding emergent behavior that arises from individual interactions_
+_dynamics/stylized facts/assumptions/anciticpated results_
+   * divergent vs convergent education
+   * normal science has high level of convergence (227)
+   * extended periods of convergence is necessary prelim to revolutionary shifts (227)
+   * convergence linked to rapid, systematic progress (230)
+   * new field = conflicting viewpoints (231)
+   * scientist/group should be both traditionalist and iconoclast (227)
+   * liberal early phase -> impression of not much progress (231)
+   * firm concensus <-> (?) pattern of rapid adancement (232)
+   * three types of work
+      * extender
+      * adjuster
+      * data-collector
+   * exploitation = more productive
+   * ignorant exploration is not productive (234)
+   * productive exploration = realizing that something is wrong with current knowledge
+   * traditionalist should yield successful scientific work
+   
+
 
 &nbsp; 
 
