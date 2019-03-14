@@ -124,6 +124,8 @@ This model does not have patches in the envrionment. So instead, the model will 
 
 _What quantitative metrics and/or qualitative features will you use to assess your model outcomes?_
 
+
+
 &nbsp; 
 
 ### 6) Parameter Sweep
