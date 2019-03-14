@@ -1,4 +1,4 @@
-# Model Proposal for _[Project Name]_
+# Model Proposal for _[Essential Tension Model]_
 
 _Your Name_
 
@@ -13,12 +13,12 @@ _Your Name_
 ### Goal 
 *****
  
-_Provide a short, 1-3 sentence description of the goal of your model_
+_To model what Thomas Kuhn calls the "essential tension" of science, which is the tension amongst scientists to pursue traditional versus innnovative work. _
 
 &nbsp;  
 ### Justification
 ****
-_Short explanation on why you are using ABM_
+_The essential tension resembles models of exploration exploitation, which is a dynamic that has been successfully represented using agent-based modeling in the past. Futhermore, agent-based modeling allows us to represent the process as a network evolution. This is a suitable way of representing the process of scientific discovery, since scientific works link together and form a network._
 
 &nbsp; 
 ### Main Micro-level Processes and Macro-level Dynamics of Interest
@@ -96,7 +96,7 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
       2. The agent can create a node that bridges two clusters of nodes
       3. The agent can create an independent node that is not connected to any pre-exisisting node
    * The less innovative an agent is, the more likely the agent is to choose #1; the more innovative an agent is, the more likely the agent is to choose action #3
-   * If the agent chooses #1 or #2, then the agent's new node must be under a certain degree away from one of the previous node(s) of the same agent, given that it is not the agent's first turn. The maximum number of degrees will be randomly assigned based on a bell-shaped curve. The variance of the curve can be adjusted by parameter PARAMETER_NAME. This is to capture the fact that scientists usually only explore a small number of topics. Additionally, the number of topics that a scientist explores may also vary by discipline. 
+   * If the agent chooses #1 or #2, then the agent's new node must be under a certain degree away from one of the previous node(s) of the same agent, given that it is not the agent's first turn. The maximum number of degrees will be randomly assigned based on a bell-shaped curve. The variance of the curve can be adjusted by discipline.topic_range. This is to capture the fact that scientists usually only explore a small number of topics. Additionally, the number of topics that a scientist explores may also vary by discipline. 
    * If the agent chooses #1, the agent's level of innovativeness then further determines which pre-existing node the agent's new node will connect to. The less innovative the agent is, the more likely that the agent will choose to connect to a node with high centrality. 
 2. Agents adjust their total citation count
    * Each agent of the round will be rewarded for their research paper through receiving citations. The number of citations received for a paper is determined probablistically depending on the number of connections the node has. If the node is not connected to any other nodes (aka the agent chooses action #3), then the number of citations received for the node will be determined by a bimodal distribution. Otherwise, the number of citations will be determined by a binomial distribution, where the more connections the node has, the smaller the variance of the curve. (CORRECTION: how can #1 produce node with 1+ connections?)
@@ -122,6 +122,7 @@ _Describe and list any global parameters you will be applying in your model._
 
 * disciipline.career_length()
 * discipline.popularity()
+* discipline.topic_range()
 
 _Describe how your model will be initialized_
 
