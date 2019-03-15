@@ -59,7 +59,7 @@ This model does not have an environment. It only has agents, who create nodes an
    if agent has not previously created a node in the network:
       create a node that links to another pre-existing random node
    else:
-      randomly pick a pre-existing node created by the agent themself
+      randomly pick a pre-existing node created by the agent in previous rounds
       survey the nodes that are within a certain degree of connection to that node
       based on agent's innovativeness, choose a node to connect to (the less innovative, the more likely to connect to a node with high connections)
 </code></pre>
