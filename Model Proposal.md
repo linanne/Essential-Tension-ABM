@@ -35,18 +35,16 @@ _The essential tension resembles models of exploration exploitation, which is a 
 ****
 &nbsp; 
 ### 1) Environment
-_Description of the environment in your model. Things to specify *if they apply*:_
 
-* discipline.popularity()
+This model does not have an environment. It only has agents, who create nodes and form a network.
+
+* discipline.popularity
+   * this variable dictates the rate at which new members join the scientific community. The rate fluctuates based on the average success of the community-- the higher the average citation counts of the community members, the higher the discipline popularity.
 
 &nbsp; 
 
 ### 2) Agents
  
- _Description of the "agents" in the system. Things to specify *if they apply*:_
- 
-* _List of agent-owned variables (e.g. age, heading, ID, etc.)_
-
 * agent.basic_personality = random number on a right-skewed distribution with a variance of discipline_innovation_skew
 * agent.innovativeness = (citation count *percentile*) x (basic_personality / 100)
    * this parameter takes into account both the agent's basic personality, and also their citation count
@@ -54,8 +52,8 @@ _Description of the environment in your model. Things to specify *if they apply*
 * agent.citation_count = 0
 * agent.project_duration = 0
 * agent.career_length = 0
+&nbsp; 
 
-* _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 * agent.connect()
 * agent.create()
 
