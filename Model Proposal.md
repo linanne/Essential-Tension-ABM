@@ -141,5 +141,6 @@ This model does not have patches in the envrionment. So instead, the model will 
 
 * ticks()
    * Not sure yet how long it will take for emergent dynamics to occur
+   * Tentative range: 1000-10000, in increments of 1000
 * discipline_innovation_skew()
    * 1-10
