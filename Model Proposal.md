@@ -1,6 +1,6 @@
 # Model Proposal for _[Essential Tension Model]_
 
-_Your Name_
+_Anne Lin_
 
 * Course ID: CMPLXSYS 530,
 * Course Title: Computer Modeling of Complex Systems
