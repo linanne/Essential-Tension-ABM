@@ -54,15 +54,19 @@ This model does not have an environment. It only has agents, who create nodes an
 * agent.career_length = 0
 &nbsp; 
 
-* agent.connect()
-* agent.create()
+* agent.connect()  <br />
+<pre><code>
+   if agent has not previously created a node in the network:
+      create a node that links to another pre-existing random node
+   else:
+      randomly pick a pre-existing node created by the agent themself
+      survey the nodes that are within a certain degree of connection to that node
+      based on agent's innovativeness, choose a node to connect to (the less innovative, the more likely to connect to a node with high connections)
+</code></pre>
+      
+* agent.create() <br />
+   agent creates a node that is not connected to any pre-existing nodes
 
-```python
-# Include first pass of the code you are thinking of using to construct your agents
-# This may be a set of "turtle-own" variables and a command in the "setup" procedure, a list, an array, or Class constructor
-# Feel free to include any agent methods/procedures you have so far. Filling in with pseudocode is ok! 
-# NOTE: If using Netlogo, remove "python" from the markdown at the top of this section to get a generic code block
-```
 
 &nbsp; 
 
@@ -107,10 +111,14 @@ _Agents interact with each other through building a network._
 
 _Describe and list any global parameters you will be applying in your model._
 
-* career_length() -> the number of ticks an agent will be active until they retire
-* ticks() -> how long the model runs before it stops
-* initial_population() -> the number of agents that create nodes in the intial round
-* discipline_innovation_skew() -> the liklihood that an agent has an innovative basic personality
+* career_length()
+   * the number of ticks an agent will be active until they retire
+* ticks()
+   * how long the model runs before it stops
+* initial_population()
+   * the number of agents that create nodes in the intial round
+* discipline_innovation_skew() 
+   * the liklihood that an agent has an innovative basic personality
 
 This model does not have patches in the envrionment. So instead, the model will start off with a group of agents creating nodes in the environment. The number of intial agents is specified in parameter intial_population. 
 
