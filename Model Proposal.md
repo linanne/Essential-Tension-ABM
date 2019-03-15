@@ -23,8 +23,8 @@ _The essential tension resembles models of exploration exploitation, which is a 
 &nbsp; 
 ### Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
-
-   
+* The fluctuation of innovativeness within a scientific community over time
+* The relationship between the overall level of innovativeness of a scientific community and the distribution of success amongst its members (as measured through citation couonts)
    
 
 
@@ -109,14 +109,10 @@ _Agents interact with each other through building a network._
 
 _Describe and list any global parameters you will be applying in your model._
 
-* career_length()
-   the number of ticks an agent will be active until they retire
-* ticks()
-   how long the model runs before it stops
-* initial_population()
-   the number of agents that create nodes in the intial round
-* discipline_innovation_skew()
-   the liklihood that an agent has an innovative basic personality
+* career_length() -> the number of ticks an agent will be active until they retire
+* ticks() -> how long the model runs before it stops
+* initial_population() -> the number of agents that create nodes in the intial round
+* discipline_innovation_skew() -> the liklihood that an agent has an innovative basic personality
 
 This model does not have patches in the envrionment. So instead, the model will start off with a group of agents creating nodes in the environment. The number of intial agents is specified in parameter intial_population. 
 
@@ -137,7 +133,7 @@ This model does not have patches in the envrionment. So instead, the model will 
 
 ### 6) Parameter Sweep
 
-ticks()
+* ticks()
    * Not sure yet how long it will take for emergent dynamics to occur
-discipline_innovation_skew()
+* discipline_innovation_skew()
    * 1-10
